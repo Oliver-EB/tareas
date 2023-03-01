@@ -3,16 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { nglf } from './nglf/nglf.component';
+import { DirectivasComponent } from './components/directivas/directivas.component';
+import { AppRoutingModule } from './app-routing.module';
+import { MateriasComponent } from './components/materias/materias.component';
+import { MateriaComponent } from './components/materia/materia.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    nglf
+    nglf,
+    DirectivasComponent,
+    MateriasComponent,
+    MateriaComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    MateriaComponent
+  ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
